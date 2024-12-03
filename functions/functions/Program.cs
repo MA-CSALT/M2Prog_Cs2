@@ -18,6 +18,15 @@
     
         }
 
+        internal void AskRandomQuestion()
+        {
+            string vraag = GetRandomVraag();
+            Console.WriteLine(vraag);
+            string antwoord = Console.ReadLine();
+
+            Console.WriteLine(antwoord);
+        }
+
         internal string GetRandomVraag()
         {
             Random rnd = new Random();
@@ -42,6 +51,8 @@
             Vraag6();
             string antwoord7 = Vraag7();
             Console.WriteLine(antwoord7);
+            AskRandomQuestion();
+            AskRandomQuestion();
 
         }
         internal void Vraag1()
