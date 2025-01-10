@@ -33,18 +33,49 @@
                 zzp= false
             };
 
-            LesUur lesUur = new LesUur()
+            LesPakket lesPakket = new LesPakket()
             {
-                auto = auto1,
-                rijLeraar=rijLeraar,
+                urenGekocht = 14,
+                urenVerbruikt = 12,
+                examenPogingen = 3,
+                automaat=false
+            };
 
-                tijd= 1130
+            TheorieTest theorieTest = new TheorieTest()
+            {
+                aantalFouten = 2,
+                gehaald = true,
+                afnameDatum= new DateTime(2020, 4, 15)
+            };
+
+            RijTest rijTest = new RijTest()
+            {
+                gehaald= false,
+                afnameDatum = new DateTime(2021, 1, 3)
             };
 
             Student student1 = new Student()
             {
                 naam = "Nick",
                 leeftijd= 18,
+                lesPakket= lesPakket,
+                theorieTest= theorieTest,
+                rijTest = rijTest
+            };
+
+            Student student2 = new Student()
+            {
+                naam = "Finn",
+                leeftijd= 20,
+            };
+
+            LesUur lesUur = new LesUur()
+            {
+                auto = auto1,
+                rijLeraar = rijLeraar,
+                student = student1,
+
+                tijd = 1130
             };
         }
    
